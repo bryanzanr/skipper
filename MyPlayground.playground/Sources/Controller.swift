@@ -14,7 +14,7 @@ struct Controller: View {
     @State private var arrayCount = 0
     @State private var executeButton = false
     @State private var priceCount = 0
-//    let destination = Peoples()
+
     var body: some View {
       VStack {
         Text("Welcome to Gokemon-CLI!")
@@ -48,17 +48,6 @@ struct Controller: View {
                 Slider(value: self.$slide, in: 1...2, step: 1)
                 Stepper("Number of Monsters: \(arrayCount)", value: $arrayCount, in: 0...Int(slide))
                 Text("Your Map: \(self.slide)")
-                Text("U = User").onAppear() {
-                    self.countDriver()
-                }
-                World(rows: Int(self.slide), columns: Int(self.slide)) { row, col in
-                    if Int(self.arrayCount) > 0 {
-                        self.checkDriver(row: row, col: col, icon: "\(self.arrayCount)")
-                        self.checkDriver(row: row, col: col, icon: "U")
-                    }else{
-                        self.checkDriver(row: row, col: col, icon: "U")
-                    }
-                }
             }else if actionType == 2 {
                 //MARK:- Toggle
                 Toggle(isOn: self.$showSecret) {
@@ -75,13 +64,13 @@ struct Controller: View {
                 Button(action: {
                     self.executeButton = !self.executeButton
                 }, label: {
-                    Text("Confirm Your Trip")
+                    Text("Confirm Your Game")
                         .foregroundColor(.green)
                 })
             }else if actionType == 3{
                 //MARK:- Text Field
-                TextField("Insert your name", text: self.$text)
-                if !self.text.isEmpty {Text("Your name: \(self.text)")}
+                TextField("Insert your Gokemon", text: self.$text)
+                if !self.text.isEmpty {Text("Your Gokemon: \(self.text)")}
             }
         }
     }
@@ -101,9 +90,9 @@ struct Controller: View {
     func executeView() -> some View {
         Group {
             if executeButton {
-                checkRoute()
+                run()
             }else{
-                checkRoute()
+                run()
             }
         }
     }
