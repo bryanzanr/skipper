@@ -11,9 +11,6 @@
 
 import PlaygroundSupport
 
-// Present the view controller in the Live View window
-//PlaygroundPage.current.liveView = Controller()
-
 // Generate View
 let contentView = Controller()
 

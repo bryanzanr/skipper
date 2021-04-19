@@ -1,31 +1,6 @@
 import Foundation
 import SwiftUI
 
-// Maps of world Object
-//struct World<Content: View>: View {
-//    let rows: Int
-//    let columns: Int
-//    let content: (Int, Int) -> Content
-//
-//    var body: some View {
-//        VStack {
-//            ForEach(0 ..< rows, id: \.self) { row in
-//                HStack {
-//                    ForEach(0 ..< self.columns, id: \.self) { column in
-//                        self.content(row, column)
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    init(rows: Int, columns: Int, @ViewBuilder content: @escaping (Int, Int) -> Content) {
-//        self.rows = rows
-//        self.columns = columns
-//        self.content = content
-//    }
-//}
-
 // Class World that control the run of recursive backtracking
 class World {
     
@@ -42,9 +17,6 @@ class World {
     private var location: Coordinate
     
     private var output: String = ""
-    
-//    let monsters = Collection()
-//    let enemies = Target()
     
     // Constructor to insert the array of string to the array of character
     init(arr: [String]) {

@@ -1,24 +1,3 @@
-//import Foundation
-//import UIKit
-
-// The class that control the work of input as well as output
-
-//public class Controller: UIViewController {
-//    let titleLabel = UILabel()
-//    let mapLabel = UILabel()
-//    let monsterLabel = UILabel()
-//    let enemyLabel = UILabel()
-//    let background = UIImageView()
-//
-//    public override func loadView() {
-//        background.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//
-//        // title label
-//        titleLabel.text = "Gokemon-CLI"
-//
-//    }
-//}
-
 import SwiftUI
 
 // Main Application
